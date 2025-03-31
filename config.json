@@ -3,5 +3,7 @@
     "username": "",
     "password": "",
     "auth_endpoint": "/auth/login",
-    "user_details_endpoint": "/users/1"
+    "user_details_endpoint": "/users/1",
+    "posts_endpoint": "/posts",
+    "comments_endpoint": "/posts/{post_id}/comments"
   }

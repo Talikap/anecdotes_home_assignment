@@ -1,7 +1,7 @@
 from api_utils import authenticate_user
 from evidence_collector import collect_evidence
 from utils import load_config
-import os
+from file_utils import save_to_file
 
 def main():
     config = load_config("config.json")
@@ -11,8 +11,8 @@ def main():
         print("Authentication failed. Exiting.")
         return
 
-    collect_evidence(config, token)
-
+    evidences = collect_evidence(config, token)
+    save_to_file(evidences,"output.txt")
 
 
 if __name__ == "__main__":

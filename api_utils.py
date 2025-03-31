@@ -19,9 +19,12 @@ def authenticate_user(config):
         print(f"Error fetching data from {url}: {exception}")
         return None
 
-def fetch_data(url, headers=None):
-    # Generic function to fetch data from the API.
-
+def fetch_data(url, headers=None, limit=None):
+    # Fetch data from the API.
+    
+    if limit is not None:
+        url += f"?limit={limit}"
+    
     try:
         response = requests.get(url, headers=headers)
         response.raise_for_status()
