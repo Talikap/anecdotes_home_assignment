@@ -1,5 +1,7 @@
 {
+    "base_url": "https://dummyjson.com",
     "username": "",
     "password": "",
-    "url": ""
-}
+    "auth_endpoint": "/auth/login",
+    "user_details_endpoint": "/users/1"
+  }

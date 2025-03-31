@@ -1,6 +1,7 @@
 from api_utils import authenticate_user
 from evidence_collector import collect_evidence
 from utils import load_config
+import os
 
 def main():
     config = load_config("config.json")
